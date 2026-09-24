@@ -1,0 +1,20 @@
+{
+  "base": {"name": "A", "clock": {"A": 3, "B": 1}},
+  "merge_invariant": true,
+  "concurrent_pairs": [["e1", "e2"], ["e2", "e3"]],
+  "others": [
+    {"name": "B", "clock": {"A": 2, "B": 4}},
+    {"name": "C", "clock": {"A": 3, "B": 1}},
+    {"name": "D", "clock": {"A": 1}}
+  ],
+  "events": [
+    {"node": "n1", "event": "e1"},
+    {"node": "n2", "event": "e2"},
+    {"node": "n1", "event": "e3"}
+  ],
+  "event_clocks": {
+    "e1": {"n1": 1},
+    "e2": {"n2": 1},
+    "e3": {"n1": 2}
+  }
+}
